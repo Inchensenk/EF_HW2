@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF_HW2
+namespace EF_HW2.Entities
 {
     public class Student
     {
@@ -16,8 +16,10 @@ namespace EF_HW2
 
         public DateTime BirthDate { get; set; }
 
-        public string? PhoneNumber { get; set; } = null!;
+        public string PhoneNumber { get; set; } = null!;
 
         public Card? Card { get; set; }
+
+
     }
 }
