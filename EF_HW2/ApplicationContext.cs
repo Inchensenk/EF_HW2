@@ -37,6 +37,8 @@ namespace EF_HW2
         {
             modelBuilder.ApplyConfiguration(new CardConfiguration());
             modelBuilder.ApplyConfiguration(new StudentConfiguration());
+            modelBuilder.ApplyConfiguration(new SubjectConfiguration());
+            modelBuilder.ApplyConfiguration(new MarkConfiguration());
         }
 
 
