@@ -9,17 +9,19 @@ namespace EF_HW2.Entities
 {
     public class Student
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
-        [Required]
+        //[Required]
         public string FirstName { get; set; } = null!;
-        [Required]
+        //[Required]
         public string LastName { get; set; } = null!;
-        [Required]
+        //[Required]
         public DateTime BirthDate { get; set; }
-        [Required]
+        //[Required]
         public string PhoneNumber { get; set; } = null!;
-
+        /// <summary>
+        /// Навигационное свойство
+        /// </summary>
         public Card? Card { get; set; }
 
 

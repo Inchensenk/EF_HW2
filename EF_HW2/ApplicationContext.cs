@@ -25,7 +25,7 @@ namespace EF_HW2
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=PIXEL;Database=StudentsDB;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=s-dev-01;Database=StudentsDB;Trusted_Connection=True;");
             optionsBuilder.LogTo(logStream.WriteLine, LogLevel.Trace);//запись лога в файл
 
             //optionsBuilder.LogTo(message => System.Diagnostics.Debug.WriteLine(message));//запись лога в дебагер
@@ -46,11 +46,11 @@ namespace EF_HW2
           Для закрытия и утилизации файлового потока StreamWriter в классе контекста переопределены методы Dispose/DisposeAsync, 
           в которых вызывается метод Dispose/DisposeAsync объекта StreamWriter.
           В итоге при выполнении программы в папке приложения появится файл лога mylog.txt.*/
-        public override void Dispose()
-        {
-            base.Dispose();
-            logStream.Dispose();
-        }
+        //public override void Dispose()
+        //{
+        //    base.Dispose();
+        //    logStream.Dispose();
+        //}
 
         public override async ValueTask DisposeAsync()
         {

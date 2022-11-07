@@ -9,7 +9,7 @@ namespace EF_HW2.Entities
 {
     public class Subject
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
 
         [Required]

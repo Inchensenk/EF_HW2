@@ -12,7 +12,7 @@ namespace EF_HW2.Entities.Configurations
     {
         public void Configure(EntityTypeBuilder<Subject> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(s=>s.Id);
         }
     }
 }

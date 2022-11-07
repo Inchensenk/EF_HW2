@@ -12,7 +12,14 @@ namespace EF_HW2.Entities
 
         public int SerialNumber { get; set; } 
 
+        /// <summary>
+        /// Внешний ключ
+        /// </summary>
         public int StudentId { get; set; }
+
+        /// <summary>
+        /// Навигационное свойство
+        /// </summary>
         public Student? Student { get; set; }
     }
 }

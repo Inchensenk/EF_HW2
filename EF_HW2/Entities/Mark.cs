@@ -9,7 +9,7 @@ namespace EF_HW2.Entities
 {
     public class Mark
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
 
         public double MarkValue { get; set; }

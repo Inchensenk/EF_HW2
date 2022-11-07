@@ -13,11 +13,24 @@ namespace EF_HW2.Entities.Configurations
         public void Configure(EntityTypeBuilder<Student> builder)
         {
             builder.HasKey(s => s.Id);
-            builder.Property(s => s.FirstName).HasMaxLength(50).IsRequired();
-            builder.Property(s => s.LastName).HasMaxLength(50).IsRequired();
-            builder.Property(s => s.BirthDate).IsRequired();
-            builder.Property(s => s.PhoneNumber).IsRequired();
-            builder.HasOne(s=>s.Card).WithOne(s=>s.Student).HasForeignKey<Student>(s=>s.Id);
+
+            builder.Property(s => s.FirstName)
+                   .HasMaxLength(50)
+                   .IsRequired();
+
+            builder.Property(s => s.LastName)
+                   .HasMaxLength(50)
+                   .IsRequired();
+
+            builder.Property(s => s.BirthDate)
+                   .IsRequired();
+
+            builder.Property(s => s.PhoneNumber)
+                   .IsRequired();
+
+            builder.HasOne(s=>s.Card)
+                   .WithOne(s=>s.Student)
+                   .HasForeignKey<Student>(s=>s.Id);
             
         }
     }

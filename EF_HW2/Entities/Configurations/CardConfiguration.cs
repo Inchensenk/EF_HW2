@@ -13,7 +13,10 @@ namespace EF_HW2.Entities.Configurations
         public void Configure(EntityTypeBuilder<Card> builder)
         {
             builder.HasKey(c => c.Id);
-            builder.Property(c => c.SerialNumber).IsRequired();
+
+            builder.Property(c => c.SerialNumber)
+                   .IsRequired();
+
             builder.HasAlternateKey(c=>c.SerialNumber);
 
         }

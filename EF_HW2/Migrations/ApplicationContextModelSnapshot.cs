@@ -40,7 +40,7 @@ namespace EF_HW2.Migrations
 
                     b.HasAlternateKey("SerialNumber");
 
-                    b.ToTable("Card");
+                    b.ToTable("Card", (string)null);
                 });
 
             modelBuilder.Entity("EF_HW2.Entities.Student", b =>
@@ -67,7 +67,7 @@ namespace EF_HW2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Student");
+                    b.ToTable("Student", (string)null);
                 });
 
             modelBuilder.Entity("EF_HW2.Entities.Student", b =>
