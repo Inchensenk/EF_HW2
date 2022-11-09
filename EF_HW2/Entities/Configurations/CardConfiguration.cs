@@ -17,7 +17,7 @@ namespace EF_HW2.Entities.Configurations
             builder.Property(c => c.SerialNumber)
                    .IsRequired();
 
-            builder.HasAlternateKey(c=>c.SerialNumber);
+            //builder.HasAlternateKey(c=>c.SerialNumber);
 
         }
     }
